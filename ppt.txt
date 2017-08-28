@@ -163,7 +163,7 @@ writeDoc( mydoc, file = 'C:/Users/Jeff/Desktop/ppt_auto/econ_update.pptx' )
 
 library(RDCOMClient)
 
-OutApp <- COMCreate("Outlook.Application")
+OutApp <- COMCreate("Outlook.Application", existing = TRUE)
 outMail = OutApp$CreateItem(0)
 outMail[["BCC"]] = 'questions@drunkstatistician.com'
 outMail[["subject"]] = "Economic Update"
